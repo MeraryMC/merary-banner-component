@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
-const MONGOCONNECTSTRING = require('mongodb://merary2:helloworld93@cluster0-shard-00-00-lfibr.mongodb.net:27017,cluster0-shard-00-01-lfibr.mongodb.net:27017,cluster0-shard-00-02-lfibr.mongodb.net:27017/banner?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true', { useNewUrlParser: true } );
+const MONGOCONNECTSTRING = 'mongodb://merary2:helloworld93@cluster0-shard-00-00-lfibr.mongodb.net:27017,cluster0-shard-00-01-lfibr.mongodb.net:27017,cluster0-shard-00-02-lfibr.mongodb.net:27017/banner?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true');
 // mongoose.connect('mongodb://localhost/banner');
-mongoose.connect(MONGOCONNECTSTRING);
+mongoose.connect(MONGOCONNECTSTRING, { useNewUrlParser: true } );
 var db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
