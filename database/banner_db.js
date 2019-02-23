@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/banner');
+const MONGOCONNECTSTRING = require('../.env/mongoconnect.js');
+// mongoose.connect('mongodb://localhost/banner');
+mongoose.connect(MONGOCONNECTSTRING);
 var db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
