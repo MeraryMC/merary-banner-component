@@ -4,7 +4,7 @@ const path = require('path');
 const {Banner, db, save} = require('../database/banner_db');
 
 let app = express();
-let port = 8082;
+let port = 8081;
 
 app.use(bodyParser.json());
 app.use(bodyParser.json());
